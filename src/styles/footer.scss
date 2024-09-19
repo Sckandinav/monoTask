@@ -1,0 +1,316 @@
+.footer {
+  position: relative;
+
+  &__inner {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__left {
+    width: 50%;
+    background-color: #222225;
+  }
+
+  &__right {
+    width: 50%;
+    background-color: #2A2A2E;
+  }
+
+  &__content {
+    max-width: 645px;
+    padding: 66px 0 30px;
+
+
+
+    &--left {
+      width: 100%;
+      float: right;
+
+    }
+
+    &--right {
+      width: 100%;
+      float: left;
+      padding-left: 126px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-bottom: 50px;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 70px;
+    width: 100%;
+    border: 1px solid rgba(120, 114, 117, 0.2);
+  }
+
+  &__list {
+    max-width: 488px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 21px;
+    row-gap: 6px;
+
+    a {
+      font-family: "Akzidenzgroteskpro", sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      transition: color 0.2s ease-in-out;
+
+
+      &:hover {
+        color: var(--white)
+      }
+    }
+  }
+
+}
+
+.products {
+
+  &__list {
+    margin-bottom: 11%;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+
+  }
+
+  &__link {
+    font-size: 24px;
+    line-height: 1.3;
+    color: var(--white);
+    font-family: 'Golos-text', sans-serif;
+    transition: color 0.2s ease-in-out;
+    line-height: 1;
+
+    &:hover {
+      color: var(--text)
+    }
+  }
+
+
+}
+
+
+.f-contacts {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-bottom: 5px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+
+  &__link {
+    font-size: 30px;
+    font-weight: 500;
+    color: var(--white);
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--accent-hover);
+    }
+
+
+  }
+
+  &__mail {
+    flex-grow: 2;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--red-salsa);
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+
+  &__btn {
+    padding: 19px 27px;
+    color: var(--white);
+    font-family: "Road-radio", sans-serif;
+    font-weight: 400;
+    border: 2px solid #494950;
+    border-radius: 14px;
+    transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+
+    &:hover {
+      border: 2px solid var(--red-salsa);
+      color: var(--red-salsa);
+    }
+  }
+
+  &__address {
+    max-width: 447px;
+    color: var(--white);
+    font-family: 'Akzidenzgroteskpro', sans-serif;
+    font-size: 16px;
+  }
+
+}
+
+.bottom {
+  display: flex;
+  justify-content: center;
+
+  &__left {
+    padding: 21px 0 31px;
+    width: 50%;
+    background-color: #222225;
+
+    div {
+      max-width: 645px;
+      width: 100%;
+      float: right;
+      // display: flex;
+    }
+  }
+
+  &__right {
+    padding: 21px 0 31px;
+    width: 50%;
+    background-color: #2A2A2E;
+    padding-left: 126px;
+    padding-right: 15px;
+
+    a {
+      color: var(--white);
+      font-family: 'Akzidenzgroteskpro', sans-serif;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--red-salsa);
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 1300px) {
+  footer {
+
+    .products__list,
+    .footer__list {
+      margin-left: 30px;
+    }
+
+  }
+
+  .f-contacts__link,
+  .products__link {
+    font-size: 20px;
+  }
+
+  .footer__content--right {
+    padding-left: 40px;
+  }
+
+  .bottom__left div p {
+    margin-left: 30px;
+  }
+
+  .bottom__right {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 938px) {
+  footer {
+    .f-contacts {
+      gap: 15px;
+
+      &__btn {
+        padding: 16px 27px;
+        margin-bottom: 15px;
+      }
+    }
+
+    &__content {
+      padding-top: 40px;
+      padding-left: 40px;
+    }
+  }
+
+
+}
+
+@media (max-width: 665px) {
+
+
+  .footer {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content {
+      padding: 30px 15px;
+
+    }
+
+    &__left,
+    &__right {
+      width: 100%;
+    }
+
+    .products__list,
+    .footer__list {
+      margin-left: 0;
+    }
+
+    &::after {
+      content: none;
+
+    }
+  }
+
+  .f-contacts {
+    flex-direction: column;
+  }
+
+  .bottom {
+    flex-direction: column;
+    justify-content: center;
+
+
+    & div {
+      width: 100%;
+      padding: 20px 15px;
+      border: transparent;
+      padding: 0;
+      text-align: center;
+
+    }
+
+    &__left {
+      background-color: #2A2A2E;
+
+
+      & div p {
+
+        margin-left: 0;
+      }
+    }
+
+    &__right {
+      p {
+        padding-bottom: 20px;
+      }
+
+    }
+  }
+
+}

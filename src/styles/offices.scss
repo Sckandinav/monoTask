@@ -1,0 +1,110 @@
+.offices {
+  padding: 81px 0 100px 0;
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__item {
+    width: 300px;
+    height: 310px;
+    padding: 30px 19px 40px;
+    background-color: var(--bg-grey);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+
+    h5 {
+      font-size: 26px;
+      font-family: 'Road-radio', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    & p {
+      font-size: 14px;
+      font-family: 'Golos-text', sans-serif;
+      font-weight: 400;
+      flex-grow: 1;
+
+      a {
+        display: block;
+        color: var(--accent);
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+          color: var(--dark);
+        }
+      }
+    }
+
+    & span {
+      color: var(--dark);
+    }
+
+    &:nth-child(7) {
+      width: 610px;
+    }
+
+
+  }
+
+  &mode {
+    margin-top: auto
+  }
+}
+
+.phone__list,
+.fax__list {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 5px;
+
+  li {
+    a {
+      font-size: 19px;
+      color: var(--dark);
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--accent-hover);
+      }
+    }
+  }
+
+
+}
+
+.fax {
+  display: flex;
+  gap: 5px;
+
+  h6 {
+    display: inline;
+    color: var(--dark);
+    font-family: "Golos-text", sans-serif;
+    font-size: 19px;
+    font-weight: normal;
+  }
+}
+
+@media(max-width:660px) {
+  .offices {
+    &__list {
+      gap: 10px;
+    }
+
+    &__item {
+      width: 100%;
+    }
+
+    // &__item:nth-child(7) {
+    //   width: 300px;
+    // }
+  }
+}

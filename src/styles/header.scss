@@ -1,0 +1,206 @@
+.header {
+  &__container {
+    padding: 11px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__navigation {
+    padding: 22px 0 25px;
+    display: flex;
+    justify-content: center;
+    list-style: disc;
+    gap: 20px;
+    background-color: #F5F5F5;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.20);
+    font-size: 12px;
+
+    li {
+      position: relative;
+      line-height: 1;
+
+      &:not(:last-child) {
+        &::after {
+          content: '';
+          position: absolute;
+          height: 3px;
+          width: 3px;
+          top: 50%;
+          right: -13px;
+          background-color: #797986;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.nav {
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 46px;
+  }
+
+  &__link {
+    font-size: 15px;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: var(--accent-hover);
+    }
+  }
+
+  &__burger {
+    margin-right: 14px;
+
+    svg path {
+      transition: fill 0.2s ease-in-out;
+    }
+
+    &:hover {
+      svg path {
+        fill: var(--accent-hover);
+      }
+    }
+  }
+
+}
+
+.info {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  &__btn {
+    padding: 19px 32px;
+    font-family: "Road-radio", sans-serif;
+    color: var(--white);
+    background: var(--accent);
+    border-radius: 14px;
+    transition: background-color 0.2s ease-in-out;
+
+    &:hover {
+      background-color: var(--accent-hover);
+    }
+  }
+
+
+}
+
+.tools {
+  &__list {
+    display: flex;
+    gap: 23px;
+
+    button {
+      svg path {
+        transition: fill 0.2s ease-in-out;
+      }
+
+      &:hover,
+      :active {
+        svg path {
+          fill: var(--accent-hover);
+        }
+      }
+    }
+  }
+}
+
+
+.contact {
+  &__link {
+    &--phone {
+      font-size: 15px;
+      color: var(--dark);
+      font-weight: 500;
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--accent-hover);
+      }
+    }
+
+    &--mail {
+      transition: color 0.2s ease-in-out;
+
+      &:hover {
+        color: var(--accent-hover);
+      }
+    }
+
+  }
+}
+
+
+@media (max-width: 1150px) {
+
+  .nav {
+    &__item:nth-child(4) {
+      display: none;
+    }
+  }
+
+  .info {
+    &__list {
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: 886px) {
+
+  .header {
+    &__logo {
+      content: url('../../public/images/logo-tablet.png');
+      width: 90px;
+    }
+
+    &__navigation {
+      padding: 15px 0;
+    }
+  }
+
+  .nav {
+    &__list {
+      gap: 10px;
+    }
+  }
+
+  .info {
+    &__btn {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 610px) {
+
+  .nav {
+    &__item:not(:first-child) {
+      display: none;
+    }
+  }
+
+  header {
+    .contacts__list {
+      display: none;
+    }
+  }
+
+
+
+  .info__list {
+    gap: 0;
+  }
+
+  .header__navigation {
+    padding: 9px 0;
+  }
+}
